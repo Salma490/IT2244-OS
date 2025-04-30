@@ -1,0 +1,26 @@
+Practical 03: Displaying System Information Using a Batch Script
+-----------------------------------------------------------------
+
+Displays key system details such as the username, Windows version, current date, and time.
+
+@echo off
+echo Username:%USERNAME%
+echo Version:
+ver
+echo date: %DATE%
+ECHO Time: %TIME%
+pause
+
+Explanation of the Commands
+
+@echo off – Hides command execution details for a cleaner output.
+echo Username : %username% – Displays the current logged-in username.
+echo Version : – Prints "Version :" as a label.
+ver – Retrieves and displays the Windows OS version.
+echo Date : %date% – Displays the current system date.
+echo Time : – Prints "Time :" as a label.
+time – Displays the system time (may prompt for modification).
+pause – Prevents the window from closing immediately, allowing the user to view the output
+
+Batch script is not case-sensitive.
+Here echo, ECHO are same

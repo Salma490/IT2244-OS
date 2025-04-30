@@ -1,0 +1,20 @@
+Practical 02: Creating a Batch Script for Age Calculation
+-----------------------------------------------------------
+
+Prompt the user for their birth year and calculate their current age based on the current date. 
+
+@echo off
+set /p birth_year=Enter your birth year:
+set current_year=%date:~10,4%
+set /a age=current_year - %birth_year%
+echo your age is:%age%
+pause
+
+Explanation of the Script:
+
+@echo off: Hides the command execution details for cleaner output.
+set /p birth_year=...: Prompts the user to input their birth year and stores it in the birth_year variable.
+%date:~10,4%: Extracts the current year from the system's date.
+set /a age=current_year - %birth_year%: Calculates the user's age by subtracting their birth year from the current year.
+echo Your age is: %age%: Displays the calculated age to the user.
+pause: Pauses the script so the user can view the result before closing the window.

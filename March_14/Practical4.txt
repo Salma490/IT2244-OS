@@ -1,0 +1,44 @@
+Practical 04: Changing Color of CMD Console
+---------------------------------------------
+Change the text and background color of the CMD console in Windows.
+
+Steps:
+
+1.Open CMD:
+Press Win + R to open the Run dialog.
+
+2.Type cmd and press Enter to open the Command Prompt.
+
+3.In the Command Prompt window, type color /? and press Enter to see the help for the color command.
+The syntax for changing the color is:
+	--> color [BG][FG]
+
+BG (Background): First digit (0-F) sets the background color.
+FG (Foreground/Text): Second digit (0-F) sets the text color.
+
+Color Codes:
+0 = Black
+1 = Blue
+2 = Green
+3 = Aqua
+4 = Red
+5 = Purple
+6 = Yellow
+7 = White
+8 = Gray
+9 = Light Blue
+
+A = Light Green
+B = Light Aqua
+C = Light Red
+D = Light Purple
+E = Light Yellow
+F = Bright White
+
+Example:
+To set the background to blue and text to light red, type color 1C and press Enter.
+
+Reset Colors:
+To reset to the default colors (black background, white text), type color and press Enter.
+
+Note: Changes made with the color command persist only for the current CMD session. Once you close the CMD window, it will revert to default colors.

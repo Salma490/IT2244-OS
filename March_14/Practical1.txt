@@ -1,0 +1,64 @@
+Practical 01: Creating a Batch Script for Directory Structure Creation
+----------------------------------------------------------------------
+
+This script will create directories based on predefined criteria and standards for each criterion.
+
+Pre-requisites:
+A text editor (e.g., Notepad++, Visual Studio Code) to write the batch script. We have used Notepad++.
+
+Steps to Create the Batch Script:
+
+1.Open a Text Editor: (e.g., Notepad++, Visual Studio Code, or Notepad).
+
+2.Write the Script:
+
+In the text editor, type the following script. 
+This script uses basic batch commands like mkdir (make directory) and cd (change directory) to create a structured hierarchy.
+
+mkdir Criteria_1
+cd Criteria_1
+mkdir Standard_1
+cd..
+mkdir Criteria_2
+cd Criteria_2
+mkdir Standard_1
+mkdir Standard_2
+cd..
+mkdir Criteria_3
+cd Criteria_3
+mkdir Standard_1
+mkdir Standard_2
+mkdir Standard_3
+cd..
+mkdir Criteria_4
+cd Criteria_4
+mkdir Standard_1
+mkdir Standard_2
+mkdir Standard_3
+cd..
+mkdir Criteria_5
+cd Criteria_5
+mkdir Standard_1
+mkdir Standard_2
+cd..
+mkdir Criteria_6
+cd Criteria_5
+mkdir Standard_1
+
+
+Running the Batch Script:
+
+1.Save the Script:
+After typing the script, save the file with a .bat extension.
+
+2.Execute the Script:
+
+Locate the .bat file in File Explorer.
+Double-click on the file to execute the script.
+The script will automatically create the directory structure in the location where the .bat file is executed.
+
+Batch Script Commands Used:
+
+mkdir: Creates directories.
+cd: Changes the current working directory
+cd..: Changes the current directory one step back
