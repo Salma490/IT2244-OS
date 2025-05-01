@@ -1,0 +1,71 @@
+Sample CSV Data: data.csv
+
+ID,Name,Age,Salary,Department
+101,Alice,30,70000,Data Science
+102,Bob,25,50000,Engineering
+103,Charlie,5,80000,Data Science
+104,David,40,90000,HR
+105,Eve,28,60000,Engineering
+106,Frank,38,75000,HR
+107,Grace,27,72000,Data Science
+108,Hank,32,68000,Engineering
+109,Ivy,29,62000,Data Science
+110,Jack,31,71000,HR
+
+1)Find Rows Containing "Engineering": grep "Engineering" data.csv 
+
+Explanation:
+grep searches for the pattern "Engineering" in the file data.csv and returns all matching rows.
+
+	
+2)Find the number of columns in the first row: awk -F, '{print NF; exit}' data.csv 
+	
+Explanation:
+-F,: Uses comma , as the field delimiter.
+NF: Refers to the number of fields (columns) in a row.
+exit: Ensures only the first row is processed.
+	
+	
+3)Find the number of columns in each row: awk -F ',' {print NF}' data.csv
+
+Explanation:
+Prints the number of fields (columns) for every row in the CSV.
+	
+	
+4)Sort CSV by Salary in Reverse Order (Descending): sort -t',' -k4,4r data.csv
+
+Explanation:
+-t',': Sets comma as the field delimiter.
+-k4,4: Sorts by the 4th column (Salary).
+r: Sorts in reverse (descending) order lexicographically (not numerically).
+	
+	
+5)Sort CSV by Salary in Ascending Order (Numerical): sort -t',' -k4,4n data.csv 
+
+Explanation:
+-n: Sorts numerically, from lowest to highest salary.
+
+Note: Header might be incorrectly placed since sort treats it as a normal row.
+	
+	
+6)Sort Without -n: Lexicographic Reverse Sort by Salary
+	sort -t',' -k4,4 -r data.csv
+
+Explanation:
+Without -n, values like "50000" and "9000" are compared as text, which may lead to incorrect sorting
+	
+	
+7)Correct Numerical Reverse Sort by Salary: sort -t',' -k4,4 -n -r data.csv 
+
+Explanation:
+-n: Ensures proper numeric comparison.
+-r: Reverse order (highest to lowest).
+Header may be placed last because "Salary" isn’t numeric.
+	
+	
+8)Multi-Level Reverse Sort (Department, then Name): sort -t',' -k5,5 -k2,2 -r data.csv 
+
+Explanation:
+-k5,5: Sorts by Department (5th column).
+-k2,2: If Department is the same, sorts by Name (2nd column).
+-r: Applies reverse sort for all keys.
