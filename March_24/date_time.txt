@@ -1,0 +1,51 @@
+LINUX DATE & TIME COMMANDS
+
+01.View calendar
+cal - Displays the calendar for the current month (ex:March 2025).
+
+
+02.Display Day of the Month
+date +%d - Shows the current day (01-31).
+
+Explanation:
+date → Displays system date and time
++%d → Extracts the day of the month
+
+
+03.Display Last Two Digits of the Year
+date +%y - Displays the last two digits of the current year.
+
+Explanation:
++%y → Extracts the year in two-digit format
+
+
+04.Display Full Weekday Name
+date +%A - Shows the full name of the day (e.g., Monday).
+
+
+05.Display Abbreviated Weekday Name
+date +%a - Shows abbreviated weekday name (e.g., Mon, Tue).
+
+
+06.Display Abbreviated Month Name
+date +%b - Displays month abbreviation (e.g., Jan, Feb, Mar).
+
+
+07.Display Full Month Name
+date +%B - Displays the full name of the month (e.g., March).
+
+
+08.Display Month as Two-Digit Number
+date +%m - Displays month as a number (01-12).
+
+
+09.Display Minutes
+date +%M - Displays the current minute (00-59).
+
+
+10.Display Hour in 24-Hour Format
+date +%H - Displays the hour (00-23).
+
+
+11.Abbreviated Month Name (Alias for %b)
+date +%h - Functions the same as %b. Shows abbreviated month name.

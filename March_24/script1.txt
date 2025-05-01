@@ -1,0 +1,61 @@
+CREATING SHELL SCRIPT FILE (.sh)
+---------------------------------
+
+What is a .sh File?
+	A file containing shell commands used for automating tasks.
+	Typically written in Bash, but can be in other shells like sh, zsh, or ksh.
+	Must be made executable using chmod.
+
+
+Steps to Create and Run a Shell Script
+__________________________________________
+
+Example Script 1 – Sum & Average of 3 Numbers
+
+1.Create file: vi prgrm1.sh
+
+2.Enter insert mode (i) and type:
+eg: 
+	echo "Who are you?"
+	read name
+	echo "Enter Number 1"
+	read x
+	echo "Enter Number 2"
+	read y
+	echo "Enter Number 3"
+	read z
+
+	sum=$(($x+$y+$z))
+	avg=$(($sum/3))
+
+	echo "Hi" $name
+	echo "Summation " $sum
+	echo "Average " $avg
+
+3.Save and exit: Press Esc, type :wq, and hit Enter
+
+4.Verify file: ls -l prgrm1.sh
+
+5.Make it executable: chmod 777 prgrm1.sh
+
+6.Run the script: ./prgrm1.sh
+
+
+
+Example Script 2 – Basic Arithmetic with Two Inputs
+
+1.Create script: vi arithmetic.sh
+2.Type the script:
+
+echo "Enter Number 1"
+read a
+echo "Enter Number 2"
+read b
+
+echo "Addition: $(($a + $b))"
+echo "Subtraction: $(($a - $b))"
+echo "Multiplication: $(($a * $b))"
+echo "Division: $(($a / $b))"
+
+3.Save, make executable, and run: chmod 777 arithmetic.sh
+./arithmetic.sh
