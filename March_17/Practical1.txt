@@ -1,0 +1,25 @@
+Steps to open PuTTY and connect to a server
+===========================================
+1.Open PuTTY – Search for PuTTY and launch it.
+
+2.Enter Server Details – Input the IP address (We connect with 172.16.140.150)
+
+3.Connect – Click Open
+
+4.Login – Enter your username and password (hidden while typing). (Password used: 789*asd)
+
+5.Access Server – You’re now connected to the server!
+
+
+Linux commands learnt
+======================
+
+pwd: The pwd command prints the current working directory
+The default directory when you log:
+/home/username
+
+Common options:
+	ls: The ls command lists files and directories in the current directory
+	ls -l → Detailed list (permissions, owner, size, etc.)
+	ls -a → Show hidden files (files starting with .)
+	ls -ltr: The command ls -ltr lists files and directories with details, sorted by modification time (oldest first).

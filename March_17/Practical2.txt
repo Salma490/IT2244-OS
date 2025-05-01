@@ -1,0 +1,134 @@
+Linux Commands
+======================
+
+1. File Creation and Editing
+
+touch - creates an empty file or updates the timestamp of an existing file.
+Syntax: touch filename.txt 
+
+vi - opens the Vi editor to create or edit a file
+Syntax: vi filename.txt
+
+~ Basic Vi Editor Commands ~
+
+Press i to enter Insert mode for editing
+
+Press ctrl+c, then type :wq → Save and exit.
+
+Use arrow keys or h, j, k, l for navigation
+
+Ex:
+vi xyz.txt
+Usama 25 Engineer
+Salma 23 IT
+Usman 21 Architect
+Safiya 18 Student
+Fathima 15 Student
+
+
+2. Viewing File Contents
+
+more: Displays file content one page at a time (only forward navigation).
+Syntax:more filename.txt
+
+less:  Displays file content with forward and backward scrolling.
+Syntax:less filename.txt
+
+
+
+3. Finding Files & Directories
+
+find:  Searches for files/directories in a directory hierarchy.
+
+ex:
+Find a file by name:
+find . -name "file.txt"
+
+Find all directories:
+find . -type d
+
+Find all .csv files
+
+4. line & Column Processing
+
+wc -l : Counts the number of lines in a file.
+Syntax: wc -l filename.txt
+
+cut: Extracts specific columns or fields from a file.
+
+ex: Extract 2nd column : cut -d ',' -f2 pqr.csv
+
+	Extract 1st and 3rd column : cut -d ',' -f1,3 pqr.csv
+	
+awk: Powerful text-processing tool for handling columns/lines based on patterns.
+
+ex:	Extract 1st column : awk -F ',' '{print $1}' pqr.csv
+	
+	
+5. Viewing Specific Lines
+
+head - Displays the first few lines of a file.
+ex: head -n 5 pqr.csv (first 5 lines)
+
+tail - Displays the last few lines of a file.
+ex: tail -n 2 pqr.csv (last 2 lines)
+
+
+6. File Content Extraction & Appending
+
+Extract and append 2nd column to another file: cut -d ',' -f2 pqr.csv >> pqrNew.csv
+Extract and append first 3 rows: head -n 3 pqr.csv >> rows.csv
+Note: If target file doesn’t exist, it will be created automatically.
+
+
+
+FILE PERMISSIONS IN LINUX
+=========================
+
+Linux file permissions control access using read, write, and execute rights, split among:
+	owner
+	group
+	others.
+
+Permission Types
+-----------------
+
+Read (r) 4: Allows the user to view the content of the file or list the contents of a directory
+Write (w) 2: Allows the user to modify the file or add/delete files in a directory.
+Execute (x) 1: Allows the user to execute a file as a program or enter a directory.
+
+
+symbolicRepresentation:
+-----------------------
+
+ex: -rwxr-xr--
+
+- : Regular file (use d for directory)
+rwx : Owner – read, write, execute
+r-x : Group – read, execute
+r-- : Others – read
+
+
+Octal (Numeric) Representation:
+--------------------------------
+
+ 777    Full permissions for everyone            
+ 755    Full for owner, read/execute for others  
+ 644    Read/write for owner, read-only for others
+ 700    Full for owner, no access for others   
+
+ 
+
+WINDOWS COMMAND PROMPT - FILE ATTRIBUTES
+========================================
+
+ATTRIB – Used to view or change file attributes.
+
+Steps:
+	1.Create two files: abc.txt and xyz.txt.
+	2.To hide abc.txt: ATTRIB +H abc.txt
+	3.To make it visible again: ATTRIB -H abc.txt
+
+Making a File Read-Only: ATTRIB +R abc.txt
+This command makes abc.txt read-only; 
+it cannot be edited unless the attribute is removed using: ATTRIB -R abc.txt
