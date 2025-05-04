@@ -1,0 +1,120 @@
+1.Get Student Name and Marks, then Calculate Total and Average
+---------------------------------------------------------------
+
+echo Enter the name:
+read name
+echo Enter the mark for subject1:
+read mark1
+echo Enter the mark for subject2:
+read mark2
+echo Enter the mark for subject3:
+read mark3
+total=$(($mark1 + $mark2 + $mark3))
+average=$(($total / 3))
+echo Total: $total
+echo Average: $average
+
+Explanation:
+Takes a student’s name and three subject marks, calculates total and average, and displays the results.
+
+
+2.Create calculator with arithmetic operations.
+-----------------------------------------------
+
+echo Enter the first number:
+read num1
+echo Enter the second number:
+read num2
+sum=$(($num1 + $num2))
+sub=$(($num1 - $num2))
+div=$(($num1 / $num2))
+mul=$(($num1 .* $num2))
+echo Summation: $sum
+echo Subtraction: $sub
+echo Division: $div
+echo Multiplication: $mul
+
+Explanation:
+Performs addition, subtraction, division, and multiplication.
+
+
+3.Get the Day Based on User Input (1-7)
+---------------------------------------
+
+echo Enter the number:
+read num
+if [ "$num" -lt 8 ]; then
+    if [ "$num" -eq 1 ]; then
+        echo "Monday"
+    elif [ "$num" -eq 2 ]; then
+        echo "Tuesday"
+    elif [ "$num" -eq 3 ]; then
+        echo "Wednesday"
+    elif [ "$num" -eq 4 ]; then
+        echo "Thursday"
+    elif [ "$num" -eq 5 ]; then
+        echo "Friday"
+    elif [ "$num" -eq 6 ]; then
+        echo "Saturday"
+    elif [ "$num" -eq 7 ]; then
+        echo "Sunday"
+    fi
+else
+    echo "Invalid Number"
+fi
+
+Explanation:
+Displays the name of the day according to the number (1–7). Displays "Invalid Number" if out of range.
+
+
+4. Verify Whether Username is Correct
+-------------------------------------
+
+echo Enter user name:
+read name
+if [ "$name" = "salma" ]; then
+    echo username is correct
+else
+    echo username is incorrect
+fi
+
+Explanation:
+Compares input username with the current system username using salma.
+
+
+5.Compare Two Numbers:
+----------------------
+
+echo Enter two numbers:
+read num1 num2
+if [ "$num1" -gt "$num2" ]; then  
+    echo $num1 is greater than $num2
+elif [ "$num1" -eq "$num2" ]; then 
+    echo $num1 is equal to $num2
+else
+    echo $num1 is less than $num2
+fi
+
+Explanation:
+Compares two input numbers using conditional statements and prints the result accordingly.
+
+
+6.Create Calculator Using expr Command
+--------------------------------------
+
+echo Enter the first number:
+read num1
+echo Enter the second number:
+read num2
+sum=$(expr $num1 + $num2)
+sub=$(expr $num1 - $num2)
+div=$(expr $num1 / $num2)
+mul=$(expr $num1 \* $num2)
+echo Summation: $sum
+echo Subtraction: $sub
+echo Division: $div
+echo Multiplication: $mul
+
+Explanation:
+Uses expr command for performing arithmetic operations. 
+Note: * is escaped as \*.
