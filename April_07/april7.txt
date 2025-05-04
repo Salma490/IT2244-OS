@@ -1,0 +1,194 @@
+Q1) Q1) Astrology Based on Life Path Number (Using case)
+
+Ex:
+calculation for life path number:
+a=date%10
+b=date/10
+c=a+b
+if life path number:
+1:Lucky
+2:Carefully do your work
+3:Stronger
+4:Happy
+5:Can get help
+6:Doubt
+7:Sad
+8:Like
+9:Courage
+
+command:
+--------
+echo "Enter your date of birth"
+read birthNum
+
+a=$(($birthNum%10))
+b=$(($birthNum/10))
+c=$(($a+$b))
+
+case $c in
+1) echo "Lucky" ;;
+2) echo "Carefuly do your work" ;;
+3) echo "Stronger" ;;
+4) echo "Happy" ;;
+5) echo "Can get help" ;;
+6) echo "Doubt" ;;
+7) echo "Sad" ;;
+8) echo "Like" ;;
+9) echo "Courage" ;;
+*) 
+x=$(($c%10))
+y=$(($c/10))
+z=$(($x+y))
+
+case $z in
+1) echo "Lucky" ;;
+2) echo "Carefuly do your work" ;;
+3) echo "Stronger" ;;
+4) echo "Happy" ;;
+5) echo "Can get help" ;;
+6) echo "Doubt" ;;
+7) echo "Sad" ;;
+8) echo "Like" ;;
+9) echo "Courage" ;;
+esac
+esac
+
+
+
+
+
+Q2) Sum and Multiplication of Numbers Using for Loop
+Ex: 1 2 3 4 5 
+summation = 15
+multiplication = 120
+
+command:
+--------
+
+sum=0
+mul=1
+for i in {1..5};
+do
+sum=$(($sum + $i))
+mul=$(($mul*$i))
+done
+echo $sum
+echo $mul
+
+
+
+Q3)Print integers from 1 to 10 using while loop
+
+i=1
+while [ $i -le 10 ]
+do
+echo $i
+i=$(($i+1))
+done
+
+
+Q4) Pattern using nested loop 
+
+i) Increasing Stars
+*
+**
+***
+****
+*****
+******
+*******
+
+for((i=1; i<=7; i++))
+do
+for((j=0; j<i; j++))
+do
+echo -n "*"
+done
+echo ""
+done
+
+ii) Decreasing Stars
+
+*******
+******
+*****
+****
+***
+**
+*
+
+for((i=7; i>0; i--))
+do
+for((j=0; j<i; j++))
+do
+echo -n "*"
+done
+echo ""
+done
+
+
+iii) Repeating Number Pattern
+
+1
+22
+333
+4444
+55555
+666666
+
+for((i=1; i<=6; i++))
+do
+for((j=0; j<i; j++))
+do
+echo -n $i
+done
+echo ""
+done
+
+
+
+iv) Sequential Number Triangle
+
+1
+12
+123
+1234
+12345
+123456
+
+for((i=1; i<=6; i++))
+do
+for((j=1; j<=i; j++))
+do
+echo -n $j
+done
+echo ""
+done
+
+
+
+v) Pyramid Pattern with Centered Stars (rows=5)
+
+    *
+   * *
+  * * * 
+ * * * *
+* * * * *
+
+for ((i=1; i<=rows; i++))
+do
+    # Print leading spaces
+    for ((j=1; j<=rows-i; j++))
+    do
+        echo -n " "
+    done
+
+    # Print stars with a space
+    for ((k=1; k<=i; k++))
+    do
+        echo -n "* "
+    done
+
+    # Move to the next line
+    echo ""
+done
