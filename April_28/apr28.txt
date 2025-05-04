@@ -1,0 +1,46 @@
+# Read three numbers
+echo "Enter the first number: "
+read a
+echo "Enter the second number: "
+read b
+echo "Enter the third number: "
+read c
+
+# Save original values for LCM calculation
+x=$a
+y=$b
+z=$c
+
+
+
+# Find GCD of a and b
+a1=$a
+b1=$b
+while [ $b -ne 0 ]
+do
+    temp=$b1
+    b1=$((a1 % b1))
+    a1=$temp
+done
+gcd_ab=$a1
+
+# Find LCM of x and y
+lcm_ab=$(( (x * y) / gcd_ab ))
+
+# Now, find GCD of original b (y) and c
+b2=$y
+d2=$c
+
+while [ $c2 -ne 0 ]
+do
+    temp=$c2
+    c2=$((b2 % c2))
+    b2=$temp
+done
+gcd_bc=$b2
+
+# Print results
+echo "---------------------------------"
+echo "LCM of $x and $y is: $lcm_ab"
+echo "GCD of $y and $c is: $gcd_bc"
+echo "---------------------------------"
