@@ -1,0 +1,43 @@
+Q1) Fibbonacci series
+0 1 1 2 3 5 8 13 21 34
+
+N=10	# Number of terms in the Fibonacci series
+a=0		# Initial values for the Fibonacci series
+b=1
+
+for((i=0; i<N; i++))
+do
+	echo -n "$a "
+	fn=$((a+b))
+	a=$b
+	b=$fn
+done
+
+
+
+
+
+Q2) Factorial Calculation
+5! = 120
+
+echo "Enter the number"
+read N
+fact=1
+for((i=2; i<=N; i++))
+do
+	fact=$((fact*i))
+done
+echo $fact 
+
+
+
+
+Q3) Multiples of 3 between 1 to 50
+
+let i=3
+echo "Multiples of 3 between 1 and 50:"
+while [ $i -le 50 ]
+do
+	echo $i
+	i=$(($i+3))
+done
