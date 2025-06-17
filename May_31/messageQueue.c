@@ -22,7 +22,7 @@ int main() {
 
     if (f == 0) {
         // Child process: Receiver
-        msqid = msgget(MSGKEY, IPC_CREAT | 0666); 
+        msqid = msgget(1234, IPC_CREAT | 0666); 
         if (msqid == -1) {
             perror("msgget failed");
             exit(EXIT_FAILURE);
